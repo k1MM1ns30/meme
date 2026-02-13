@@ -8,7 +8,7 @@
 
 .img1{
     position: absolute;
-    width: 10.5vw;
+    width: 25vw;
     left: 10vw;
     top: 30vh;
 
@@ -17,7 +17,7 @@
 }
 .img2{
     position: absolute;
-    width: 8vw;
+    width: 18vw;
     left: 85vw;
     top: 12vh;
     filter: drop-shadow(0 0 1em rgba(255, 187, 52, 0.833));
@@ -25,7 +25,7 @@
 }
 .img3{
     position: absolute;
-    width: 8vw;
+    width: 12vw;
     left: 70vw;
     top: 50vh;
     filter: drop-shadow(0 0 1em rgba(255, 72, 185, 0.833));
@@ -33,7 +33,7 @@
 }
 .img4{
     position: absolute;
-    width: 9vw;
+    width: 36vw;
     left: 50vw;
     top: 70vh;
     filter: drop-shadow(0 0 1em rgba(255, 52, 62, 0.833));
