@@ -17,22 +17,37 @@
 .img2{
     position: absolute;
     width: 8vw;
-    left: 25vw;
+    left: 85vw;
     top: 12vh;
     
 }
 .img3{
     position: absolute;
     width: 8vw;
-    left: 30vw;
+    left: 70vw;
     top: 50vh;
     
 }
 .img4{
     position: absolute;
     width: 9vw;
-    left: 40vw;
+    left: 50vw;
     top: 70vh;
     
+}
+
+@media print{
+    .img1{
+        filter: drop-shadow(0 0 1em rgba(52, 255, 245, 0.833));
+    }
+    .img2{
+        filter: drop-shadow(0 0 1em rgba(255, 187, 52, 0.833));
+    }
+    .img3{
+        filter: drop-shadow(0 0 1em rgba(255, 72, 185, 0.833));
+    }
+    .img4{
+        filter: drop-shadow(0 0 1em rgba(255, 52, 62, 0.833));
+    }
 }
 
