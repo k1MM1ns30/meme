@@ -12,6 +12,7 @@
     left: 10vw;
     top: 30vh;
 
+    filter: drop-shadow(0 0 1em rgba(52, 255, 245, 0.833));
 
 }
 .img2{
@@ -19,6 +20,7 @@
     width: 8vw;
     left: 85vw;
     top: 12vh;
+    filter: drop-shadow(0 0 1em rgba(255, 187, 52, 0.833));
     
 }
 .img3{
@@ -26,6 +28,7 @@
     width: 8vw;
     left: 70vw;
     top: 50vh;
+    filter: drop-shadow(0 0 1em rgba(255, 72, 185, 0.833));
     
 }
 .img4{
@@ -33,21 +36,7 @@
     width: 9vw;
     left: 50vw;
     top: 70vh;
+    filter: drop-shadow(0 0 1em rgba(255, 52, 62, 0.833));
     
-}
-
-@media print{
-    .img1{
-        filter: drop-shadow(0 0 1em rgba(52, 255, 245, 0.833));
-    }
-    .img2{
-        filter: drop-shadow(0 0 1em rgba(255, 187, 52, 0.833));
-    }
-    .img3{
-        filter: drop-shadow(0 0 1em rgba(255, 72, 185, 0.833));
-    }
-    .img4{
-        filter: drop-shadow(0 0 1em rgba(255, 52, 62, 0.833));
-    }
 }
 
