@@ -8,7 +8,7 @@
 
 .img1{
     position: absolute;
-    width: 25vw;
+    width: 10vw;
     left: 10vw;
     top: 30vh;
 
@@ -17,7 +17,7 @@
 }
 .img2{
     position: absolute;
-    width: 18vw;
+    width: 10vw;
     left: 85vw;
     top: 12vh;
     filter: drop-shadow(0 0 1em rgba(255, 187, 52, 0.833));
@@ -25,18 +25,76 @@
 }
 .img3{
     position: absolute;
-    width: 12vw;
-    left: 70vw;
+    width: 14vw;
+    left: 60vw;
     top: 50vh;
     filter: drop-shadow(0 0 1em rgba(255, 72, 185, 0.833));
     
 }
 .img4{
     position: absolute;
-    width: 36vw;
-    left: 50vw;
+    width: 15vw;
+    left: 35vw;
     top: 70vh;
     filter: drop-shadow(0 0 1em rgba(255, 52, 62, 0.833));
     
 }
 
+body{
+  margin: 0;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.833);
+  position: fixed;
+  overflow: hidden;
+}
+
+
+body::before{
+
+    content: "";
+    position: fixed;
+
+    width: 30vw;
+    height: 30vh;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+
+    border-radius: 50%;
+
+
+    background: radial-gradient(circle,
+        rgba(34, 222, 255, 0.8) 0%,
+        rgba(34, 222, 255, 0.4) 40%,
+        rgba(34, 222, 255, 0.1) 70%,
+        rgba(34, 222, 255, 0) 100%
+  );
+
+  filter: blur(20px);
+
+  animation: pulse 4s ease-out infinite;
+
+
+
+}
+
+@keyframes pulse{
+
+  0%{
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.9;
+  }
+
+  70%{
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0.3;
+  }
+
+  100%{
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+
+}
