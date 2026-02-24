@@ -26,7 +26,7 @@
 .img3{
     position: absolute;
     width: 14vw;
-    left: 60vw;
+    left: 50vw;
     top: 50vh;
     filter: drop-shadow(0 0 1em rgba(255, 72, 185, 0.833));
     
@@ -34,9 +34,54 @@
 .img4{
     position: absolute;
     width: 15vw;
-    left: 35vw;
+    left: 30vw;
     top: 70vh;
     filter: drop-shadow(0 0 1em rgba(255, 52, 62, 0.833));
+    
+}
+
+.img5{
+    position: absolute;
+    width: 16vw;
+    left: 30vw;
+    top: 20vh;
+    filter: drop-shadow(0 0 1em rgba(36, 54, 255, 0.833));
+    
+}
+
+.img6{
+    position: absolute;
+    width: 13vw;
+    left: 12vw;
+    top: 50vh;
+    filter: drop-shadow(0 0 1em rgba(253, 231, 35, 0.833));
+    
+}
+
+.img7{
+    position: absolute;
+    width: 15vw;
+    left: 75vw;
+    top: 70vh;
+    filter: drop-shadow(0 0 1em rgba(36, 255, 164, 0.833));
+    
+}
+
+.img8{
+    position: absolute;
+    width: 15vw;
+    left: 60vw;
+    top: 15vh;
+    filter: drop-shadow(0 0 1em rgba(36, 255, 87, 0.833));
+    
+}
+
+.img9{
+    position: absolute;
+    width: 10vw;
+    left: 78vw;
+    top: 45vh;
+    filter: drop-shadow(0 0 1em rgba(255, 36, 36, 0.833));
     
 }
 
@@ -97,4 +142,104 @@ body::before{
     opacity: 0;
   }
 
+}
+
+
+@media (max-width: 488px){
+
+  /* body 스크롤 가능하게 */
+  body{
+    position: static;
+    overflow: auto;
+  }
+
+  /* 캔버스를 세로 정렬 flex로 */
+  .canvas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vh;
+    padding: 10vh 0;
+  }
+
+  /* 모든 이미지 absolute 해제 */
+  .canvas img{
+    position: static;
+    width: 80vw;
+    height: auto;
+  }
+
+  /* 원형 그라데이션 제거 */
+  body::before{
+    content: none;
+    animation: none;
+  }
+
+  /* 배경색만 변경 */
+  body{
+    background-color: rgba(34, 222, 255, 0.12);
+  }
+}
+
+@media (min-width: 488px) and (max-width: 1024px){
+
+  /* 스크롤 가능하게 */
+  body{
+    position: static;
+    overflow: auto;
+  }
+
+  /* 2컬럼 grid */
+  .canvas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vh 4vw;
+    padding: 8vh 6vw;
+  }
+
+  /* absolute 해제 */
+  .canvas img{
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  /* 원형 펄스 제거 (원하면 유지 가능) */
+  body::before{
+    content: none;
+    animation: none;
+  }
+
+  body{
+    background-color: blue;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape){
+
+  /* 배경만 변경 */
+  body{
+    background-color: rgb(0, 217, 255);
+  }
+
+  /* 원형 그라데이션(펄스) 끄고 싶으면 */
+  body::before{
+    content: none;
+    animation: none;
+  }
+
+  /* ✅ iPad용 grid/flex로 바뀌는 걸 원천 차단: 데스크탑처럼 absolute 유지 */
+  .canvas{
+    display: block;
+  }
+  .canvas img{
+    position: absolute;
+  }
+
+  /* ✅ 스크롤/포지션도 데스크탑 유지 (너 기존 값이 fixed/hidden이라면 그대로 두는 게 맞음) */
+  body{
+    position: fixed;
+    overflow: hidden;
+  }
 }
